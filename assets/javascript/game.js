@@ -24,14 +24,14 @@ $(document).ready(function(){
 	
 	// a random number generator + assigner
 	function chooseNumber() {
-		var randomNumber = Math.floor((Math.random()*10) + 1);
+		var randomNumber = Math.floor((Math.random()*12) + 1);
 		return randomNumber;
 	};
 
 	//a reset function
 	function reset(){
 		//choose a random number between 1 and 40, and use Math.floor to cut off decimals
-		targetNumber = Math.floor((Math.random()*40)+1);
+		targetNumber = Math.floor((Math.random()*102)+19);
 		//overwrite the random number to the DOM element numberHolder
 		numberHolder.html(targetNumber);
 
