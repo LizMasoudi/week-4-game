@@ -1,0 +1,44 @@
+body {
+	background-image: url("../images/contemporary_china.png");
+}
+
+h1 {
+	text-align: center;
+}
+
+#number {
+	background-color:#c5e8e7;
+	text-align: center;
+	padding:5%;
+}
+
+#numberHolder {
+	font-weight: bold;
+	font-size: 35px;
+}
+
+#scoreHolder {
+	font-weight: bold;
+	font-size: 35px;
+}
+
+img {
+	float:left;
+	margin-right:15px;
+	width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display:inline-block;
+}
+
+#score {
+	background-color:#27938e;
+	text-align: center;
+	padding:5%;
+}
+
+#counters {
+	background-color:#74cac5;
+/*	text-align: center;*/
+	padding:5%;
+}
