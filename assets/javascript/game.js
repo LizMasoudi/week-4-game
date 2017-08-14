@@ -24,13 +24,14 @@ $(document).ready(function(){
 	
 	// a random number generator + assigner
 	function chooseNumber() {
+		//generate a random number between 1 and 12
 		var randomNumber = Math.floor((Math.random()*12) + 1);
 		return randomNumber;
 	};
 
 	//a reset function
 	function reset(){
-		//choose a random number between 1 and 40, and use Math.floor to cut off decimals
+		//choose a random number between 19 and 120, and use Math.floor to cut off decimals
 		targetNumber = Math.floor((Math.random()*102)+19);
 		//overwrite the random number to the DOM element numberHolder
 		numberHolder.html(targetNumber);
@@ -41,13 +42,13 @@ $(document).ready(function(){
 		
 		//choose a random number between 1 and 10 for each of the crystals
 		blueValue = chooseNumber();
-		console.log(blueValue);
+		//console.log(blueValue);
 		pinkValue = chooseNumber();
-		console.log(pinkValue);
+		//console.log(pinkValue);
 		purpleValue = chooseNumber();
-		console.log(purpleValue);
+		//console.log(purpleValue);
 		yellowValue = chooseNumber();
-		console.log(yellowValue);
+		//console.log(yellowValue);
 	}
 
 	function check() {
@@ -65,38 +66,31 @@ $(document).ready(function(){
 		}
 	}
 
-	
 	function play (){
 		reset();
 		start();
-
 		//each time a crystal is clicked, add its value to the score 
 		$("#blue-crystal").on("click", function() {
 			score += blueValue;
 			scoreHolder.html(score);
 			check();
 		});
-
 		$("#pink-crystal").on("click", function() {
 			score += pinkValue;
 			scoreHolder.html(score);
 			check();
 		});
-
 		$("#purple-crystal").on("click", function() {
 			score += purpleValue;
 			scoreHolder.html(score);
 			check();
 		});
-		
 		$("#yellow-crystal").on("click", function() {
 			score += yellowValue;
 			scoreHolder.html(score);
 			check();
 		});
-
-
 	};
+
 	play();
-	
 });
